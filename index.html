@@ -139,20 +139,21 @@
       margin: 0 auto;      /* centers horizontally */
     }
   </style><script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
-                .then(() => console.log("Service Worker registered"))
-                .catch((error) => console.error("Service Worker registration failed:", error));
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(() => console.log("Service Worker registered"))
+            .catch((error) => console.error("Service Worker registration failed:", error));
 
-            navigator.serviceWorker.addEventListener('message', (event) => {
-                if (event.data && event.data.action === 'updateComplete') {
-                    const updateMessage = document.getElementById('update-message');
-                    updateMessage.textContent = "The app has been updated. Please reload.";
-                    updateMessage.style.display = 'block';
-                }
-            });
-        }
-    </script>
+        navigator.serviceWorker.addEventListener('message', (event) => {
+            if (event.data && event.data.action === 'updateComplete') {
+                const updateMessage = document.getElementById('update-message');
+                updateMessage.textContent = "The app has been updated. Please reload.";
+                updateMessage.style.display = 'block';
+            }
+        });
+    }
+</script>
+
     <style>
         #update-message {
             display: none;
