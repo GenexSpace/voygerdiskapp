@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Spacecraft</title>
+  <!-- Bootstrap CSS -->
+  <link href="file/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa; /* Light background */
+    }
+    .navbar {
+      background-color: #000;
+      font-size: 1.25rem; /* Enlarged menu */
+    }
+    .navbar a {
+      color: #fff !important;
+      font-weight: 500;
+      padding: 10px 15px; /* Larger spacing */
+    }
+    .navbar a:hover {
+      color: #ffc107 !important;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background: url('file/voyager-banner-blue.jpg') center/cover no-repeat;
+      height: 450px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 700px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+    }
+
+    /* Content Section */
+    .content-section {
+      padding: 40px 20px;
+    }
+    .content-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .content-section img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark">
+    <div class="container">
+      <!-- No .navbar-expand-xx => always fully visible on mobile -->
+      <a class="navbar-brand" href="index.html">Voyager</a>
+      <ul class="navbar-nav nav nav-pills ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">The Interstellar Mission</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="goldenrecord.html">The Golden Record</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="music.html">Music On the Disk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="spacecraft.html">The Spacecraft</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="where.html">Where is it now</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>The Spacecraft</h1>
+      <p>Discover the technology and design behind NASA's historic Voyager probes.</p>
+    </div>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="content-section">
+    <div class="container">
+      <h2>Overview of Voyager Spacecraft</h2>
+      <p>
+        Both Voyager 1 and Voyager 2 were built to explore Jupiter and Saturn, but
+        they far exceeded their original mission goals. With dozens of instruments,
+        they conducted groundbreaking studies of the outer planets and are now
+        venturing into interstellar space, carrying the Golden Record with them.
+      </p>
+      <img src="file/instruments-3.jpg" alt="Voyager Spacecraft Diagram">
+
+      <h2>Key Components</h2>
+      <ul>
+        <li><strong>High-Gain Antenna (HGA):</strong> Sends and receives data over vast distances.</li>
+        <li><strong>Radioisotope Thermoelectric Generators (RTGs):</strong> Provide electrical power from the decay of plutonium-238.</li>
+        <li><strong>Science Instruments:</strong> Cameras, spectrometers, magnetometers, and more, used to investigate planets, moons, and cosmic phenomena.</li>
+        <li><strong>Golden Record:</strong> A message for any spacefaring civilization that might find Voyager in the distant future.</li>
+      </ul>
+      <img src="file/Voyager_spacecraft_model.png" alt="Voyager Spacecraft Model">
+
+      <p>
+        The spacecraft continue to send back valuable scientific data. Their
+        power sources are expected to operate at least into the mid-2020s.
+      </p>      <h2>Primary and Extended Missions</h2>
+      <p>
+        The primary mission goals focused on Jupiter and Saturn, leading to major 
+        discoveries such as active volcanoes on Jupiter's moon Io and new insights 
+        into the structure of Saturn's rings. Voyager 2 continued on to Uranus and 
+        Neptune, completing humanity's first (and so far only) visit to those distant 
+        ice giants. 
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Genex Space. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- (Optional) Bootstrap JS -->
+  <!-- <script src="file/bootstrap.bundle.min.js"></script> -->
+</body>
+</html>

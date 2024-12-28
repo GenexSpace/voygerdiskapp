@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Where are they now</title>
+  <!-- Bootstrap CSS -->
+  <link href="file/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+    .navbar {
+      background-color: #000;
+      font-size: 1.25rem; /* Enlarged menu */
+    }
+    .navbar a {
+      color: #fff !important;
+      font-weight: 500;
+      padding: 10px 15px; /* Larger spacing */
+    }
+    .navbar a:hover {
+      color: #ffc107 !important;
+    }
+    .hero {
+      background: url("file/voyager-banner-blue.jpg") center/cover no-repeat;
+      height: 280px;
+      position: relative;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .hero-content {
+      z-index: 1;
+      position: relative;
+      max-width: 700px;
+      padding: 0 15px;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .content-section {
+      padding: 40px 20px;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .section-header button {
+      font-size: 1rem;
+    }
+    .table th {
+      background-color: #e9ecef;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    .footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar (always visible) -->
+  <nav class="navbar navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Voyager</a>
+      <ul class="navbar-nav nav nav-pills ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">The Interstellar Mission</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="goldenrecord.html">The Golden Record</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="music.html">Music On the Disk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="spacecraft.html">The Spacecraft</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="where.html">Where is it now</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Where are Voyager 1 and Voyager 2 Now?</h1>
+      <p>Both Voyager 1 and Voyager 2 have reached interstellar space and continue their unique journey deeper into the cosmos.</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content-section">
+    <div class="container">
+
+      <!-- Mission Status Heading + Collapsible -->
+      <div class="section-header mt-3">
+        <h2>Mission Status</h2>
+        <!-- Optional collapse button (Bootstrap JS needed to fully work) -->
+        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#missionStatus">
+          Toggle Status
+        </button>
+      </div>
+      <!-- Collapsible Table -->
+      <div class="collapse show" id="missionStatus">
+        <div class="table-responsive mt-3">
+          <table class="table table-bordered table-striped align-middle">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Voyager 1</th>
+                <th>Voyager 2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Launch Date</td>
+                <td>Mon, 05 Sept 1977 12:56:00 UTC</td>
+                <td>Sat, 20 Aug 1977 14:29:00 UTC</td>
+              </tr>
+              <tr>
+                <td>Mission Elapsed Time</td>
+                <td>47 yrs : 03 mos : 22 days : 20 hrs : 31 mins : 34 secs</td>
+                <td>47 yrs : 04 days : 18 hrs : 58 mins : 34 secs</td>
+              </tr>
+              <tr>
+                <td>Distance from Earth</td>
+                <td>15,492,678,396 mi<br>166.66718997 AU</td>
+                <td>12,957,560,652 mi<br>139.3349841 AU</td>
+              </tr>
+              <tr>
+                <td>Distance from the Sun</td>
+                <td>15,405,550,505 mi<br>165.72882523 AU</td>
+                <td>12,875,592,088 mi<br>138.5103891 AU</td>
+              </tr>
+              <tr>
+                <td>Velocity wrt the Sun (est.)</td>
+                <td>~38,026.77 mph</td>
+                <td>~34,390.98 mph</td>
+              </tr>
+              <tr>
+                <td>One-Way Light Time</td>
+                <td>23:06:07 (hh:mm:ss)</td>
+                <td>19:11:18 (hh:mm:ss)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+* As on 28th Dec 2024
+      <!-- Instrument Status Heading + Collapsible -->
+      <div class="section-header mt-5">
+        <h2>Instrument Status</h2>
+          </div>
+      <div class="collapse show" id="instrumentStatus">
+        <div class="mt-3">
+          <p>Below is an example summary of the instruments still operational (in reality you’d provide up-to-date details):</p>
+          <ul>
+            <li><strong>Cosmic Ray Subsystem:</strong> Active</li>
+            <li><strong>Low-Energy Charged Particles:</strong> Active</li>
+            <li><strong>Magnetometer:</strong> Active</li>
+            <li><strong>Plasma Science Instrument:</strong> Powered Off</li>
+            <li><strong>Plasma Wave Subsystem:</strong> Active</li>
+            <li><strong>Imaging Science Subsystem:</strong> Powered Off</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Present Position -->
+      <h2 class="mt-5">Present Position</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p>
+            For a near real-time 3D visualization of where Voyager 1 and Voyager 2 are 
+            now, visit NASA’s Eyes on the Solar System. 
+            This interactive tool shows the position of both spacecraft (and other missions) 
+            in our solar neighborhood, updated live with mission data.
+          </p>
+          
+        </div>
+        <div class="col-md-6 text-center">
+          <!-- Example placeholder image or NASA Eyes screenshot -->
+          <img src="file/screenshot-2024-10-24-at-6-32.png" alt="Eyes on Voyager Preview" class="img-fluid" style="max-width: 70%;">
+          <p class="mt-2"><small>Voyager 1's position in October 2024. (NASA Visualization)</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Genex Space. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (needed for collapsibles) -->
+  <script src="file/bootstrap.bundle.min.js"></script>
+</body>
+</html>

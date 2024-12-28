@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="file/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- BaguetteBox CSS (from a CDN or local) -->
+  <link
+    rel="stylesheet"
+    href="file/baguetteBox.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+    .navbar {
+      background-color: #000;
+      font-size: 1.25rem; /* Enlarged menu */
+    }
+    .navbar a {
+      color: #fff !important;
+      font-weight: 500;
+      padding: 10px 15px; /* Larger spacing */
+    }
+    .navbar a:hover {
+      color: #ffc107 !important;
+    }
+    .hero {
+      background: url("file/gallery-hero.jpg") center/cover no-repeat;
+      height: 280px;
+      position: relative;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .hero-content {
+      z-index: 1;
+      position: relative;
+      max-width: 700px;
+      padding: 0 15px;
+    }
+    .hero-content h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .content-section {
+      padding: 40px 20px;
+    }
+    /* Make images look nice */
+    .tab-content img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      cursor: pointer; /* indicates clickable */
+    }
+    .footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar (always visible, no expand => everything visible on mobile) -->
+  <nav class="navbar navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Voyager</a>
+      <ul class="navbar-nav nav nav-pills ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">The Interstellar Mission</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="goldenrecord.html">The Golden Record</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="music.html">Music On the Disk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="spacecraft.html">The Spacecraft</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="where.html">Where is it now</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="gallery.html">Gallery</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Voyager Gallery</h1>
+      <p>A collection of images and behind-the-scenes of the Voyager journey.</p>
+    </div>
+  </div>
+
+  <!-- Tabs Section -->
+  <div class="content-section">
+    <div class="container">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" id="voyagerGalleryTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="making-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#making"
+            type="button"
+            role="tab"
+            aria-controls="making"
+            aria-selected="true"
+          >
+            Making of the Disk
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="on-disk-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#on-disk"
+            type="button"
+            role="tab"
+            aria-controls="on-disk"
+            aria-selected="false"
+          >
+            Images on the Disk
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="launch-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#launch"
+            type="button"
+            role="tab"
+            aria-controls="launch"
+            aria-selected="false"
+          >
+            Launch & Spacecraft
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="captured-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#captured"
+            type="button"
+            role="tab"
+            aria-controls="captured"
+            aria-selected="false"
+          >
+            Images Captured
+          </button>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content" id="voyagerGalleryTabsContent">
+        <!-- Making of the Disk -->
+        <div
+          class="tab-pane fade show active"
+          id="making"
+          role="tabpanel"
+          aria-labelledby="making-tab"
+        >
+          <!-- Each tab has a gallery-group class so they open in the same lightbox set -->
+          <div class="gallery-group row my-4">
+            <!-- Example images (wrap them in <a href="path/to/fullsize.jpg">) -->
+            <div class="col-md-4">
+              <a href="file/making1-large.jpg">
+                <img src="file/making1.jpg" alt="Making of the Disk 1" />
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="file/making2-large.jpg">
+                <img src="file/making2.jpg" alt="Making of the Disk 2" />
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="file/making3-large.jpg">
+                <img src="file/making3.jpg" alt="Making of the Disk 3" />
+              </a>
+            </div>
+          </div>
+          <p>
+            Behind the scenes of how the Golden Record was conceived and pressed. 
+            <!-- add more text or images as needed -->
+          </p>
+        </div>
+
+        <!-- Images on the Disk -->
+        <div
+          class="tab-pane fade"
+          id="on-disk"
+          role="tabpanel"
+          aria-labelledby="on-disk-tab"
+        >
+          <div class="gallery-group row my-4">
+            <div class="col-md-3">
+              <a href="file/ondisk1-large.jpg">
+                <img src="file/ondisk1.jpg" alt="On the Disk 1" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="file/ondisk2-large.jpg">
+                <img src="file/ondisk2.jpg" alt="On the Disk 2" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="file/ondisk3-large.jpg">
+                <img src="file/ondisk3.jpg" alt="On the Disk 3" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="file/ondisk4-large.jpg">
+                <img src="file/ondisk4.jpg" alt="On the Disk 4" />
+              </a>
+            </div>
+          </div>
+          <p>
+            A selection of images included on the Golden Record for any potential 
+            extraterrestrial discoverers.
+          </p>
+        </div>
+
+        <!-- Launch -->
+        <div
+          class="tab-pane fade"
+          id="launch"
+          role="tabpanel"
+          aria-labelledby="launch-tab"
+        >
+          <div class="gallery-group row my-4">
+            <div class="col-md-6">
+              <a href="file/launch1-large.jpg">
+                <img src="file/launch1.jpg" alt="Launch Day 1" />
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a href="file/launch2-large.jpg">
+                <img src="file/launch2.jpg" alt="Launch Day 2" />
+              </a>
+            </div>
+          </div>
+          <p>
+            Historical photos from the 1977 launches of Voyager 1 and Voyager 2.
+          </p>
+        </div>
+
+        <!-- Images Captured -->
+        <div
+          class="tab-pane fade"
+          id="captured"
+          role="tabpanel"
+          aria-labelledby="captured-tab"
+        >
+          <div class="gallery-group row my-4">
+            <div class="col-md-4">
+              <a href="file/captured1-large.jpg">
+                <img src="file/captured1.jpg" alt="Captured Image 1" />
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="file/captured2-large.jpg">
+                <img src="file/captured2.jpg" alt="Captured Image 2" />
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="file/captured3-large.jpg">
+                <img src="file/captured3.jpg" alt="Captured Image 3" />
+              </a>
+            </div>
+          </div>
+          <p>
+            Stunning views of the solar system and beyond taken by the Voyager 
+            spacecraft over the decades.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Genex Space. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS for Tabs -->
+  <script src="file/bootstrap.bundle.min.js"></script>
+
+  <!-- BaguetteBox JS (from a CDN or local) -->
+  <script
+    src="file/baguetteBox.min.js"
+  ></script>
+  <script>
+    // Initialize baguetteBox for all .gallery-group containers
+    document.addEventListener('DOMContentLoaded', function() {
+      // For each tab's images, we can re-run or simply pass the main container
+      baguetteBox.run('.gallery-group', {
+        // optional settings
+        animation: 'fadeIn',
+        noScrollbars: true,
+      });
+    });
+  </script>
+</body>
+</html>
