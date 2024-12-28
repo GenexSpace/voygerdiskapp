@@ -138,7 +138,30 @@
       display: block;      /* ensures block-level for centering */
       margin: 0 auto;      /* centers horizontally */
     }
-  </style>
+  </style><script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(() => console.log("Service Worker registered"))
+                .catch((error) => console.error("Service Worker registration failed:", error));
+
+            navigator.serviceWorker.addEventListener('message', (event) => {
+                if (event.data && event.data.action === 'updateComplete') {
+                    const updateMessage = document.getElementById('update-message');
+                    updateMessage.textContent = "The app has been updated. Please reload.";
+                    updateMessage.style.display = 'block';
+                }
+            });
+        }
+    </script>
+    <style>
+        #update-message {
+            display: none;
+            background-color: #f0c040;
+            color: #000;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
   <!-- Navbar with nav-pills -->
@@ -265,12 +288,12 @@
 
   <!-- Footer -->
   <footer class="footer bg-dark text-white text-center py-3">
-    <div class="container">
+    <div class="container"><p><div id="update-message"></div></p>
       <p>&copy; 2024 Genex Space. All rights reserved.</p>
     </div>
   </footer>
 
   <!-- Offline Bootstrap JS -->
-  <script src="file/bootstrap.bundle.min.js"></script>
+  <script src="file/bootstrap.min.js"></script>
 </body>
 </html>
