@@ -1,22 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#000000">
-    <title>Sample PWA</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Golden Record</title>
+  <!-- Bootstrap CSS -->
+  <link href="file/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .navbar {
+      background-color: #000;
+      font-size: 1.25rem; /* Enlarged menu */
+    }
+    .navbar a {
+      color: #fff !important;
+      font-weight: 500;
+      padding: 10px 15px; /* Larger spacing */
+    }
+    .navbar a:hover {
+      color: #ffc107 !important;
+    }
+
+    .hero {
+      position: relative;
+      background: url('file/voyager-gold-record-front.jpg') center/cover no-repeat;
+      height: 450px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-top: 10px;
+    }
+
+    .info-section {
+      padding: 40px 20px;
+      background-color: #f8f9fa;
+    }
+    .info-section p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .info-details {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .info-details div {
+      margin-bottom: 15px;
+    }
+    .info-details span {
+      display: block;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+    .info-details h6 {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .overview-section {
+      padding: 40px 20px;
+    }
+    .overview-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .overview-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .overview-list li {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+    .overview-list li:last-child {
+      border-bottom: none;
+    }
+    .overview-list span {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #000;
+    }
+    .overview-list h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    .overview-list p {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .overview-list a {
+      color: #d9534f;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .overview-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* Ensure images are responsive and centered */
+    .disk-image, .spacecraft-image {
+      max-width: 100%;
+      border-radius: 10px;
+      display: block;      /* ensures block-level for centering */
+      margin: 0 auto;      /* centers horizontally */
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to the Sample PWA</h1>
-    <p>This is a simple offline-enabled PWA.</p>
+  <!-- Navbar with nav-pills -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Voyager</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Add nav-pills classes -->
+        <ul class="navbar-nav nav nav-pills ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">The Interstellar Mission</a></li>
+          <li class="nav-item"><a class="nav-link " href="goldenrecord.html">The Golden Record</a></li>          <li class="nav-item">
+            <a class="nav-link " href="music.html">Music On the Disk</a>
+          </li>
 
-    <!-- Section to display storage usage -->
-    <div id="storage-info">
-        <h2>Storage Information</h2>
-        <p id="storage-usage">Checking storage usage...</p>
+          <li class="nav-item"><a class="nav-link" href="spacecraft.html">The Spacecraft</a></li>
+          <li class="nav-item"><a class="nav-link" href="where.html">Where is it now</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>The Golden Record</h1>
+      <p>Launched in 1977, both Voyager spacecraft carry a unique 'time capsule' along with them into interstellar space.</p>
+    </div>
+  </div>
+
+  <!-- Information Section -->
+  <div class="info-section">
+    <div class="container">
+      <p>
+        Voyager 1 and its twin Voyager 2 are the only spacecraft ever to operate outside the heliosphere, the protective bubble of particles and magnetic fields generated by the Sun. Voyager 1 reached the interstellar boundary in 2012, while Voyager 2 (traveling slower and in a different direction than its twin) reached it in 2018.
+      </p>
+      <div class="info-details">
+        <div>
+          <span>Mission Type</span>
+          <h6>Multiple Flybys</h6>
+        </div>
+        <div>
+          <span>Launch</span>
+          <h6>1977</h6>
+        </div>
+        <div>
+          <span>Science Targets</span>
+          <h6>Outer Solar System, Interstellar Space</h6>
+        </div>
+        <div>
+          <span>Status</span>
+          <h6>Extended Mission</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overview Section -->
+  <div class="overview-section">
+    <div class="container">
+      <h2>A Kind of Time Capsule</h2>
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            Pioneers 10 and 11, which preceded Voyager, both carried small metal plaques identifying their time and place of origin for the benefit of any other spacefarers that might find them in the distant future. With this example before them, NASA placed a more ambitious message aboard Voyager 1 and 2: a kind of time capsule, intended to communicate a story of our world to extraterrestrials.
+          </p>
+          <h2>Overview</h2>
+          <ul class="overview-list">
+            <li>
+              <span>01</span>
+              <h3>The Golden Record Cover</h3>
+              <p>The record's protective cover includes instructions for playing its contents, finding Earth in the cosmos, and dating how long it has been in space.</p>
+            </li>
+            <li>
+              <span>02</span>
+              <h3>What's on the Record?</h3>
+              <p>The record features images and a variety of natural sounds, such as thunder, birds, musical selections, and spoken greetings in 55 languages.</p>
+            </li>
+            <li>
+              <span>03</span>
+              <h3>History and Manufacturing</h3>
+              <p>Many people were instrumental in the design, development, and manufacturing of the golden record.</p>
+            </li>
+          </ul> <img 
+            src="file/instruments-3.jpg" 
+            alt="Voyager Golden Record" 
+            class="img-fluid disk-image d-block mx-auto"
+          >
+        </div>
+        <div class="col-md-4">
+          <!-- Centered & Responsive Image -->
+          <img 
+            src="file/voyager-golden-record-cover.jpg" 
+            alt="Voyager Golden Record" 
+            class="img-fluid disk-image d-block mx-auto"
+          >
+          <div class="text-center mt-4">
+            <!-- Centered & Responsive Image -->
+            <img 
+              src="file/Voyager_spacecraft_model.png" 
+              alt="Voyager Spacecraft Model" 
+              class="img-fluid spacecraft-image d-block mx-auto"
+            >
+            <p class="mt-3">
+              This is what the Voyager spacecraft looks like. Its intricate design 
+              includes instruments for interstellar exploration and a golden record that 
+              carries humanity's story to the cosmos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2024 Genex Space. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Offline Bootstrap JS -->
+  <script src="file/bootstrap.bundle.min.js"></script>
 </body>
 </html>

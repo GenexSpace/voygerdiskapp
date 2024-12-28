@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music from Earth</title>
+  <!-- Bootstrap CSS -->
+  <link href="file/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa; /* Light background */
+    }
+    .navbar {
+      background-color: #000;
+      font-size: 1.25rem; /* Enlarged menu */
+    }
+    .navbar a {
+      color: #fff !important;
+      font-weight: 500;
+      padding: 10px 15px; /* Larger spacing */
+    }
+    .navbar a:hover {
+      color: #ffc107 !important;
+    }
+
+    .hero {
+      position: relative;
+      /* Hero background; update filename/path as desired */
+      background: url('file/The_Sounds_of_Earth_-_GPN-2000-001976.jpg') center/cover no-repeat; 
+      height: 400px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 600px;
+      padding: 0 15px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+    }
+
+    .music-section {
+      padding: 40px 20px;
+    }
+    .music-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    .list-group-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .track-info {
+      max-width: 70%;
+    }
+    audio {
+      min-width: 200px;
+      margin-top: 10px;
+    }
+    .footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar with nav-pills -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Voyager</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Add nav-pills classes -->
+        <ul class="navbar-nav nav nav-pills ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">The Interstellar Mission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="goldenrecord.html">The Golden Record</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="music.html">Music On the Disk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="spacecraft.html">The Spacecraft</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="where.html">Where is it now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Music from Earth</h1>
+      <p>The following music was included on the Voyager record.</p>
+    </div>
+  </div>
+
+  <!-- Music Section -->
+  <div class="music-section">
+    <div class="container">
+      <h2>Featured Tracks</h2>
+      <!-- List Group of Audio Players 
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Country of Origin:</strong> Germany<br>
+            <strong>Composition:</strong> Bach, Brandenburg Concerto No. 2 in F. First Movement<br>
+            <strong>Artist(s):</strong> Munich Bach Orchestra, Karl Richter, conductor<br>
+            <strong>Length:</strong> 4:40
+          </div>
+Add .audio-player class so the pause-others script works 
+          <audio controls class="audio-player">
+            <source src="music/track1.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+        Paste your other 26 items here exactly as you had them -->
+      </ul>
+      
+      <!-- SUBTITLE: Sounds of Earth -->
+      <h3 class="mt-5">Sounds of Earth</h3>
+      <ul class="list-group">
+        <!-- 1. Music of the Spheres -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> "Music of the Spheres" – Johannes Kepler's <em>Harmonices Mundi</em> realized by Laurie Spiegel
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/golden-record-music-of-the-spheres.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+        <!-- 2. Volcanoes, Earthquake, Thunder -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Volcanoes, Earthquake, Thunder
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound2.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 3. Mud Pots -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Mud Pots
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/golden-record-mud-pots.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 4. Wind, Rain, Surf -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Wind, Rain, Surf
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound4.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 5. Crickets, Frogs -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Crickets, Frogs
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound5.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 6. Birds, Hyena, Elephant, Whale -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Birds, Hyena, Elephant, Whale
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound6.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 7. Chimpanzee -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Chimpanzee
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound7.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 8. Wind (again) -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Wind
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound8.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 9. Wild Dog -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Wild Dog
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound9.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 10. Heartbeat, Footsteps, Laughter (Sagan's) -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Heartbeat, Footsteps, Laughter (Sagan's)
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound10.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 11. The First Tools -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> The First Tools
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound11.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 12. Tame Dog -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Tame Dog
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound12.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 13. Herding Sheep, Blacksmith, Sawing -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Herding Sheep, Blacksmith, Sawing
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound13.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 14. Tractor, Riveter -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Tractor, Riveter
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound14.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 15. Morse Code, Ships -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Morse Code, Ships (precisely, a ship's horn)
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound15.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 16. Horse and Cart -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Horse and Cart
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound16.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 17. Train (steam locomotive whistle) -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Train (specifically the whistle of a steam locomotive)
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound17.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 18. Tractor, Bus, Auto -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Tractor, Bus, Auto
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound18.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 19. F-111 Flyby, Saturn V Lift-off (Apollo 15) -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> F-111 Flyby, Saturn V Lift-off (Apollo 15)
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound19.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 20. Kiss, Mother and Child -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Kiss, Mother and Child
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound20.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+        <!-- 21. Life Signs, Pulsar -->
+        <li class="list-group-item">
+          <div class="track-info">
+            <strong>Sound:</strong> Life Signs, Pulsar
+          </div>
+          <audio controls class="audio-player">
+            <source src="music/sound21.mp3" type="audio/mpeg" />
+          </audio>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Genex Space. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script to pause any audio that's not currently selected -->
+  <script>
+    // When any audio element starts playing, pause all others.
+    document.addEventListener('play', function(e) {
+      const allAudios = document.querySelectorAll('.audio-player');
+      allAudios.forEach(audio => {
+        if (audio !== e.target) {
+          audio.pause();
+        }
+      });
+    }, true);
+  </script>
+
+  <!-- Offline Bootstrap JS (optional if you want Bootstrap's JavaScript features) -->
+  <!-- <script src="file/bootstrap.bundle.min.js"></script> -->
+</body>
+</html>

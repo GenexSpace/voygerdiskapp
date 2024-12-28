@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Golden Record</title>
+  <!-- Bootstrap CSS -->
+  <link href="file/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+    }
+    .navbar {
+      background-color: #000;
+      font-size: 1.25rem; /* Enlarged menu */
+    }
+    .navbar a {
+      color: #fff !important;
+      font-weight: 500;
+      padding: 10px 15px; /* Larger spacing */
+    }
+    .navbar a:hover {
+      color: #ffc107 !important;
+    }
+
+    .hero {
+      position: relative;
+      background: url('file/voyager-gold-record-front.jpg') center/cover no-repeat;
+      height: 450px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-top: 10px;
+    }
+
+    .content-section {
+      padding: 40px 20px;
+    }
+    /* Center images and make them responsive */
+    .content-section img {
+      display: block;
+      margin: 20px auto;     /* centers the image horizontally */
+      max-width: 100%;       /* makes it responsive */
+      border-radius: 10px;   /* optional styling */
+    }
+
+    .footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar with nav-pills -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Voyager</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Add nav-pills classes to the menu -->
+        <ul class="navbar-nav nav nav-pills ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">The Interstellar Mission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="goldenrecord.html">The Golden Record</a>
+          </li>
+                    <li class="nav-item">
+            <a class="nav-link" href="music.html">Music On the Disk</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="spacecraft.html">The Spacecraft</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="where.html">Where is it now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>The Golden Record</h1>
+      <p>Launched in 1977, both Voyager spacecraft carry a unique 'time capsule' along with them into interstellar space.</p>
+    </div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="content-section">
+    <div class="container">
+      <p>
+        In the upper left-hand corner is an easily recognized drawing of the phonograph record and the stylus carried with it. The stylus is in the correct position to play the record from the beginning. Written around it in binary arithmetic is the correct time of one rotation of the record, 3.6 seconds, expressed in time units of 0.70 billionths of a second, the time period associated with a fundamental transition of the hydrogen atom. The drawing indicates that the record should be played from the outside in. Below this drawing is a side view of the record and stylus, with a binary number giving the time to play one side of the record—about an hour.
+      </p>
+      <!-- Centered & responsive image -->
+      <img 
+        src="file/voyager-record-diagram.jpeg" 
+        alt="Golden Record Cover"
+        class="img-fluid d-block mx-auto"
+      >
+      <p>
+        The information in the upper right-hand portion of the cover is designed to show how pictures are to be constructed from the recorded signals. The top drawing shows the typical signal that occurs at the start of a picture. The picture is made from this signal, which traces the picture as a series of vertical lines, similar to ordinary television (in which the picture is a series of horizontal lines). Picture lines 1, 2, and 3 are noted in binary numbers, and the duration of one of the "picture lines," about 8 milliseconds, is noted. The drawing immediately below shows how these lines are to be drawn vertically, with staggered "interlace" to give the correct picture rendition. Immediately below this is a drawing of an entire picture raster, showing that there are 512 vertical lines in a complete picture. Immediately below this is a replica of the first picture on the record to permit the recipients to verify that they are decoding the signals correctly. A circle was used in this picture to ensure that the recipients use the correct ratio of horizontal to vertical height in picture reconstruction.
+      </p>
+      <!-- Centered & responsive image -->
+      <img
+        src="file/cover-diagram-large.jpg"
+        alt="Recording Cover Diagram"
+        class="img-fluid d-block mx-auto"
+      >
+      <p>
+        The drawing in the lower left-hand corner of the cover is the pulsar map previously sent as part of the plaques on Pioneers 10 and 11. It shows the location of the solar system with respect to 14 pulsars, whose precise periods are given. The drawing containing two circles in the lower right-hand corner is a drawing of the hydrogen atom in its two lowest states, with a connecting line and digit 1 to indicate that the time interval associated with the transition from one state to the other is to be used as the fundamental time scale, both for the time given on the cover and in the decoded pictures.
+      </p>
+      <p>
+        Electroplated onto the record's cover is an ultra-pure source of uranium-238 with a radioactivity of about 0.00026 microcuries. The steady decay of the uranium source into its daughter isotopes makes it a useful indicator of radioactive decay. Half of the uranium-238 will decay in 4.51 billion years. Thus, by examining this two-centimeter diameter circle of uranium and measuring the amount of daughter elements to the remaining uranium-238, an extraterrestrial recipient of the Voyager spacecraft could calculate the time elapsed since a spot of uranium was placed aboard the spacecraft. This should be a check on the epoch of launch, which is also described by the pulsar map on the record cover.
+      </p>
+      <!-- Centered & responsive image -->
+      <img
+        src="file/voyager-record-location.jpeg"
+        alt="Voyager Spacecraft with Golden Record"
+        class="img-fluid d-block mx-auto"
+      >
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2024 Genex Space. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Offline Bootstrap JS -->
+  <script src="file/bootstrap.bundle.min.js"></script>
+</body>
+</html>
