@@ -14,7 +14,7 @@
     rel="stylesheet"
   />
 
-  <!-- BaguetteBox CSS (from a CDN or local) -->
+  <!-- BaguetteBox CSS (CDN or local) -->
   <link
     rel="stylesheet"
     href="file/baguetteBox.min.css"
@@ -39,8 +39,9 @@
     .navbar a:hover {
       color: #ffc107 !important;
     }
+
     .hero {
-      background: url("file/gallery-hero.jpg") center/cover no-repeat;
+      background: url("gallery/pia01384.webp") center/cover no-repeat;
       height: 280px;
       position: relative;
       color: #fff;
@@ -67,16 +68,19 @@
       font-weight: 700;
       margin-bottom: 10px;
     }
+
     .content-section {
       padding: 40px 20px;
     }
-    /* Make images look nice */
+
+    /* Images and lightbox styling */
     .tab-content img {
       max-width: 100%;
       border-radius: 8px;
       margin-bottom: 20px;
-      cursor: pointer; /* indicates clickable */
+      cursor: pointer; /* indicates clickable lightbox */
     }
+
     .footer {
       background-color: #000;
       color: #fff;
@@ -87,8 +91,8 @@
   </style>
 </head>
 <body>
-  <!-- Navbar (always visible, no expand => everything visible on mobile) -->
-  <nav class="navbar navbar-dark">
+  <!-- Navbar (always visible) -->
+  <nav class="navbar navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">Voyager</a>
       <ul class="navbar-nav nav nav-pills ms-auto">
@@ -118,13 +122,14 @@
   <div class="hero">
     <div class="hero-content">
       <h1>Voyager Gallery</h1>
-      <p>A collection of images and behind-the-scenes of the Voyager journey.</p>
+      <p>Explore images related to the Voyager mission and the Golden Record.</p>
     </div>
   </div>
 
   <!-- Tabs Section -->
   <div class="content-section">
     <div class="container">
+
       <!-- Nav tabs -->
       <ul class="nav nav-tabs" id="voyagerGalleryTabs" role="tablist">
         <li class="nav-item" role="presentation">
@@ -166,7 +171,7 @@
             aria-controls="launch"
             aria-selected="false"
           >
-            Launch & Spacecraft
+            Launch &amp; Spacecraft
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -186,130 +191,942 @@
       </ul>
 
       <!-- Tab panes -->
-      <div class="tab-content" id="voyagerGalleryTabsContent">
-        <!-- Making of the Disk -->
+      <div class="tab-content mt-4" id="voyagerGalleryTabsContent">
+
+        <!-- 1) Making of the Disk -->
         <div
           class="tab-pane fade show active"
           id="making"
           role="tabpanel"
           aria-labelledby="making-tab"
         >
-          <!-- Each tab has a gallery-group class so they open in the same lightbox set -->
-          <div class="gallery-group row my-4">
-            <!-- Example images (wrap them in <a href="path/to/fullsize.jpg">) -->
-            <div class="col-md-4">
-              <a href="file/making1-large.jpg">
-                <img src="file/making1.jpg" alt="Making of the Disk 1" />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="file/making2-large.jpg">
-                <img src="file/making2.jpg" alt="Making of the Disk 2" />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="file/making3-large.jpg">
-                <img src="file/making3.jpg" alt="Making of the Disk 3" />
-              </a>
-            </div>
-          </div>
-          <p>
-            Behind the scenes of how the Golden Record was conceived and pressed. 
-            <!-- add more text or images as needed -->
-          </p>
+          <div class="row gallery-group">
+             <div class="col-md-4">
+          <a 
+            href="gallery/voyager-record-cover-446eb9.webp"
+            data-caption="Voyager Golden Record Cover"
+          >
+            <img 
+              src="gallery/voyager-record-cover-446eb9.webp"
+              alt="Voyager Golden Record Cover"
+            />
+          </a>
+          <p>Voyager Golden Record Cover</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/voyager-gold-record-display.webp"
+            data-caption="Voyager Golden Record Album"
+          >
+            <img 
+              src="gallery/voyager-gold-record-display.webp"
+              alt="Voyager Golden Record Album"
+            />
+          </a>
+          <p>Voyager Golden Record Album</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/voyager-recording-session-6-29-77-30796968361-o.webp"
+            data-caption="Preparing the Voyager Golden Record"
+          >
+            <img 
+              src="gallery/voyager-recording-session-6-29-77-30796968361-o.webp"
+              alt="Preparing the Voyager Golden Record"
+            />
+          </a>
+          <p>Preparing the Voyager Golden Record</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/voyager-recording-session-6-29-77-30769379012-o.webp"
+            data-caption="Voyager Golden Record Recording Session – Rinse"
+          >
+            <img 
+              src="gallery/voyager-recording-session-6-29-77-30769379012-o.webp"
+              alt="Voyager Golden Record Recording Session – Rinse"
+            />
+          </a>
+          <p>Voyager Golden Record Recording Session – Rinse</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/voyager-golden-record-etching-7-28-77-30849543195-o.webp"
+            data-caption="Voyager Golden Record – Etching – July 28, 1977"
+          >
+            <img 
+              src="gallery/voyager-golden-record-etching-7-28-77-30849543195-o.webp"
+              alt="Voyager Golden Record – Etching – July 28, 1977"
+            />
+          </a>
+          <p>Voyager Golden Record – Etching – July 28, 1977</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/voyager-golden-record-etching-7-28-77-30548567140-o.webp"
+            data-caption="Voyager Golden Record – Etching"
+          >
+            <img 
+              src="gallery/voyager-golden-record-etching-7-28-77-30548567140-o.webp"
+              alt="Voyager Golden Record – Etching"
+            />
+          </a>
+          <p>Voyager Golden Record – Etching</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/voyager-golden-record-gold-plating-8-23-77-30812980156-o.webp"
+            data-caption="Voyager Golden Record – Plating – Aug. 23, 1977"
+          >
+            <img 
+              src="gallery/voyager-golden-record-gold-plating-8-23-77-30812980156-o.webp"
+              alt="Voyager Golden Record – Plating – Aug. 23, 1977"
+            />
+          </a>
+          <p>Voyager Golden Record – Plating – Aug. 23, 1977</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/voyager-golden-record-lamination-bonding-8-31-1977-30812615156-o.webp"
+            data-caption="Voyager Golden Record – Lamination Bonding – Aug. 31, 1977"
+          >
+            <img 
+              src="gallery/voyager-golden-record-lamination-bonding-8-31-1977-30812615156-o.webp"
+              alt="Voyager Golden Record – Lamination Bonding – Aug. 31, 1977"
+            />
+          </a>
+          <p>Voyager Golden Record – Lamination Bonding – Aug. 31, 1977</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/voyager-recording-session-6-29-77.webp"
+            data-caption="Voyager Golden Record Recording Session"
+          >
+            <img 
+              src="gallery/voyager-recording-session-6-29-77.webp"
+              alt="Voyager Golden Record Recording Session"
+            />
+          </a>
+          <p>Voyager Golden Record Recording Session</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/the-golden-record-30269492703-o.webp"
+            data-caption="The Voyager Golden Record"
+          >
+            <img 
+              src="gallery/the-golden-record-30269492703-o.webp"
+              alt="The Voyager Golden Record"
+            />
+          </a>
+          <p>The Voyager Golden Record</p>
+        </div>          </div>
         </div>
 
-        <!-- Images on the Disk -->
+        <!-- 2) Images on the Disk -->
         <div
           class="tab-pane fade"
           id="on-disk"
           role="tabpanel"
           aria-labelledby="on-disk-tab"
         >
-          <div class="gallery-group row my-4">
-            <div class="col-md-3">
-              <a href="file/ondisk1-large.jpg">
-                <img src="file/ondisk1.jpg" alt="On the Disk 1" />
-              </a>
-            </div>
-            <div class="col-md-3">
-              <a href="file/ondisk2-large.jpg">
-                <img src="file/ondisk2.jpg" alt="On the Disk 2" />
-              </a>
-            </div>
-            <div class="col-md-3">
-              <a href="file/ondisk3-large.jpg">
-                <img src="file/ondisk3.jpg" alt="On the Disk 3" />
-              </a>
-            </div>
-            <div class="col-md-3">
-              <a href="file/ondisk4-large.jpg">
-                <img src="file/ondisk4.jpg" alt="On the Disk 4" />
-              </a>
-            </div>
+          <div class="row gallery-group">
+              <div class="col-md-4">
+          <a 
+            href="gallery/calibration-circle-31325346536-o.webp"
+            data-caption="Calibration Circle"
+          >
+            <img 
+              src="gallery/calibration-circle-31325346536-o.webp"
+              alt="Calibration Circle"
+            />
+          </a>
+          <p>Calibration Circle</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/un-building-night-30556368033-o.webp"
+            data-caption="UN Building Night"
+          >
+            <img 
+              src="gallery/un-building-night-30556368033-o.webp"
+              alt="UN Building Night"
+            />
+          </a>
+          <p>UN Building Night</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/physical-unit-definitions-30554003853-o.webp"
+            data-caption="Physical unit definitions"
+          >
+            <img 
+              src="gallery/physical-unit-definitions-30554003853-o.webp"
+              alt="Physical unit definitions"
+            />
+          </a>
+          <p>Physical unit definitions</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/modern-house-cloudcroft-new-mexico-30556337973-o.webp"
+            data-caption="Modern house (Cloudcroft, New Mexico)"
+          >
+            <img 
+              src="gallery/modern-house-cloudcroft-new-mexico-30556337973-o.webp"
+              alt="Modern house (Cloudcroft, New Mexico)"
+            />
+          </a>
+          <p>Modern house (Cloudcroft, New Mexico)</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/house-construction-african-30542255034-o.webp"
+            data-caption="House construction (African)"
+          >
+            <img 
+              src="gallery/house-construction-african-30542255034-o.webp"
+              alt="House construction (African)"
+            />
+          </a>
+          <p>House construction (African)</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/egypt-red-sea-sinal-peninsula-and-the-nile-30993198280-o.webp"
+            data-caption="Egypt, Red Sea, Sinal Peninsula and the Nile"
+          >
+            <img 
+              src="gallery/egypt-red-sea-sinal-peninsula-and-the-nile-30993198280-o.webp"
+              alt="Egypt, Red Sea, Sinal Peninsula and the Nile"
+            />
+          </a>
+          <p>Egypt, Red Sea, Sinal Peninsula and the Nile</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/supermarket-30555896943-o.webp"
+            data-caption="Supermarket"
+          >
+            <img 
+              src="gallery/supermarket-30555896943-o.webp"
+              alt="Supermarket"
+            />
+          </a>
+          <p>Supermarket</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/children-with-globe-30541853554-o.webp"
+            data-caption="Children with globe"
+          >
+            <img 
+              src="gallery/children-with-globe-30541853554-o.webp"
+              alt="Children with globe"
+            />
+          </a>
+          <p>Children with globe</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/sprinters-valeri-borzov-of-the-ussr-in-lead-history-of-the-olympics-31363259165-o.webp"
+            data-caption="Sprinters (Valeri Borzov of the U.S.S.R. in lead)"
+          >
+            <img 
+              src="gallery/sprinters-valeri-borzov-of-the-ussr-in-lead-history-of-the-olympics-31363259165-o.webp"
+              alt="Sprinters (Valeri Borzov of the U.S.S.R. in lead)"
+            />
+          </a>
+          <p>Sprinters (Valeri Borzov of the U.S.S.R. in lead)</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/fishing-boat-with-nets-30542208064-o.webp"
+            data-caption="Fishing boat with nets"
+          >
+            <img 
+              src="gallery/fishing-boat-with-nets-30542208064-o.webp"
+              alt="Fishing boat with nets"
+            />
+          </a>
+          <p>Fishing boat with nets</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/house-africa-30994933500-o.webp"
+            data-caption="House (Africa)"
+          >
+            <img 
+              src="gallery/house-africa-30994933500-o.webp"
+              alt="House (Africa)"
+            />
+          </a>
+          <p>House (Africa)</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/schoolroom-30994523250-o.webp"
+            data-caption="Schoolroom"
+          >
+            <img 
+              src="gallery/schoolroom-30994523250-o.webp"
+              alt="Schoolroom"
+            />
+          </a>
+          <p>Schoolroom</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/jupiter-31325748356-o.webp"
+            data-caption="Jupiter"
+          >
+            <img 
+              src="gallery/jupiter-31325748356-o.webp"
+              alt="Jupiter"
+            />
+          </a>
+          <p>Jupiter</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/man-from-guatemala-30541182514-o.webp"
+            data-caption="Man from Guatemala"
+          >
+            <img 
+              src="gallery/man-from-guatemala-30541182514-o.webp"
+              alt="Man from Guatemala"
+            />
+          </a>
+          <p>Man from Guatemala</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/sketch-of-bushmen-30541167404-o.webp"
+            data-caption="Sketch of bushmen"
+          >
+            <img 
+              src="gallery/sketch-of-bushmen-30541167404-o.webp"
+              alt="Sketch of bushmen"
+            />
+          </a>
+          <p>Sketch of bushmen</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/diagram-of-vertebrate-evolution-30993842550-o.webp"
+            data-caption="Diagram of vertebrate evolution"
+          >
+            <img 
+              src="gallery/diagram-of-vertebrate-evolution-30993842550-o.webp"
+              alt="Diagram of vertebrate evolution"
+            />
+          </a>
+          <p>Diagram of vertebrate evolution</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/structure-of-earth-31247834881-o.webp"
+            data-caption="Structure of Earth"
+          >
+            <img 
+              src="gallery/structure-of-earth-31247834881-o.webp"
+              alt="Structure of Earth"
+            />
+          </a>
+          <p>Structure of Earth</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/diagram-of-continental-drift-31247808951-o.webp"
+            data-caption="Diagram of continental drift"
+          >
+            <img 
+              src="gallery/diagram-of-continental-drift-31247808951-o.webp"
+              alt="Diagram of continental drift"
+            />
+          </a>
+          <p>Diagram of continental drift</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/diagram-of-family-ages-31326608936-o.webp"
+            data-caption="Diagram of family ages"
+          >
+            <img 
+              src="gallery/diagram-of-family-ages-31326608936-o.webp"
+              alt="Diagram of family ages"
+            />
+          </a>
+          <p>Diagram of family ages</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/demonstration-of-licking-eating-and-drinking-30542224004-o.webp"
+            data-caption="Demonstration of licking, eating and drinking"
+          >
+            <img 
+              src="gallery/demonstration-of-licking-eating-and-drinking-30542224004-o.webp"
+              alt="Demonstration of licking, eating and drinking"
+            />
+          </a>
+          <p>Demonstration of licking, eating and drinking</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/nursing-mother-31362634275-o.webp"
+            data-caption="Nursing mother"
+          >
+            <img 
+              src="gallery/nursing-mother-31362634275-o.webp"
+              alt="Nursing mother"
+            />
+          </a>
+          <p>Nursing mother</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/diagram-of-male-and-female-31326553496-o.webp"
+            data-caption="Diagram of male and female"
+          >
+            <img 
+              src="gallery/diagram-of-male-and-female-31326553496-o.webp"
+              alt="Diagram of male and female"
+            />
+          </a>
+          <p>Diagram of male and female</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/fetus-diagram-30540929914-o.webp"
+            data-caption="Fetus diagram"
+          >
+            <img 
+              src="gallery/fetus-diagram-30540929914-o.webp"
+              alt="Fetus diagram"
+            />
+          </a>
+          <p>Fetus diagram</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/diagram-of-conception-31218656712-o.webp"
+            data-caption="Diagram of conception"
+          >
+            <img 
+              src="gallery/diagram-of-conception-31218656712-o.webp"
+              alt="Diagram of conception"
+            />
+          </a>
+          <p>Diagram of conception</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/dna-structure-magnified-light-hit-31362224015-o.webp"
+            data-caption="DNA structure magnified, light hit"
+          >
+            <img 
+              src="gallery/dna-structure-magnified-light-hit-31362224015-o.webp"
+              alt="DNA structure magnified, light hit"
+            />
+          </a>
+          <p>DNA structure magnified, light hit</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/dna-structure-31362211895-o.webp"
+            data-caption="DNA structure"
+          >
+            <img 
+              src="gallery/dna-structure-31362211895-o.webp"
+              alt="DNA structure"
+            />
+          </a>
+          <p>DNA structure</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/chemical-definitions-31218371762-o.webp"
+            data-caption="Chemical definitions"
+          >
+            <img 
+              src="gallery/chemical-definitions-31218371762-o.webp"
+              alt="Chemical definitions"
+            />
+          </a>
+          <p>Chemical definitions</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/earth-31326146966-o.webp"
+            data-caption="Earth"
+          >
+            <img 
+              src="gallery/earth-31326146966-o.webp"
+              alt="Earth"
+            />
+          </a>
+          <p>Earth</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/mars-30992814480-o.webp"
+            data-caption="Mars"
+          >
+            <img 
+              src="gallery/mars-30992814480-o.webp"
+              alt="Mars"
+            />
+          </a>
+          <p>Mars</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/mercury-31246953391-o.webp"
+            data-caption="Mercury"
+          >
+            <img 
+              src="gallery/mercury-31246953391-o.webp"
+              alt="Mercury"
+            />
+          </a>
+          <p>Mercury</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/solar-spectrum-30992778240-o.webp"
+            data-caption="Solar spectrum"
+          >
+            <img 
+              src="gallery/solar-spectrum-30992778240-o.webp"
+              alt="Solar spectrum"
+            />
+          </a>
+          <p>Solar spectrum</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/solar-system-parameters-30992729550-o.webp"
+            data-caption="Solar system parameters"
+          >
+            <img 
+              src="gallery/solar-system-parameters-30992729550-o.webp"
+              alt="Solar system parameters"
+            />
+          </a>
+          <p>Solar system parameters</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/solar-system-parameters-30554017073-o.webp"
+            data-caption="Solar system parameter"
+          >
+            <img 
+              src="gallery/solar-system-parameters-30554017073-o.webp"
+              alt="Solar system parameter"
+            />
+          </a>
+          <p>Solar system parameter</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/mathematical-definitions-30539954574-o.webp"
+            data-caption="Mathematical definitions"
+          >
+            <img 
+              src="gallery/mathematical-definitions-30539954574-o.webp"
+              alt="Mathematical definitions"
+            />
+          </a>
+          <p>Mathematical definitions</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/solar-location-map-30992503150-o.webp"
+            data-caption="Solar location map"
+          >
+            <img 
+              src="gallery/solar-location-map-30992503150-o.webp"
+              alt="Solar location map"
+            />
+          </a>
+          <p>Solar location map</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/violin-with-music-score-cavatina-31072637180-o.webp"
+            data-caption="Violin with music score (Cavatina)"
+          >
+            <img 
+              src="gallery/violin-with-music-score-cavatina-31072637180-o.webp"
+              alt="Violin with music score (Cavatina)"
+            />
+          </a>
+          <p>Violin with music score (Cavatina)</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/titan-centaur-launch-31297529782-o.webp"
+            data-caption="Titan Centaur launch"
+          >
+            <img 
+              src="gallery/titan-centaur-launch-31297529782-o.webp"
+              alt="Titan Centaur launch"
+            />
+          </a>
+          <p>Titan Centaur launch</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/astronaut-in-space-30620956564-o.webp"
+            data-caption="Astronaut in space"
+          >
+            <img 
+              src="gallery/astronaut-in-space-30620956564-o.webp"
+              alt="Astronaut in space"
+            />
+          </a>
+          <p>Astronaut in space</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/page-of-book-newton-system-of-the-world-31297500982-o.webp"
+            data-caption="Page of book (Newton, System of the World)"
+          >
+            <img 
+              src="gallery/page-of-book-newton-system-of-the-world-31297500982-o.webp"
+              alt="Page of book (Newton, System of the World)"
+            />
+          </a>
+          <p>Page of book (Newton, System of the World)</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/radio-telescope-arecibo-31442688195-o.webp"
+            data-caption="Radio telescope (Arecibo)"
+          >
+            <img 
+              src="gallery/radio-telescope-arecibo-31442688195-o.webp"
+              alt="Radio telescope (Arecibo)"
+            />
+          </a>
+          <p>Radio telescope (Arecibo)</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/airplane-in-flight-30634172743-o.webp"
+            data-caption="Airplane in flight"
+          >
+            <img 
+              src="gallery/airplane-in-flight-30634172743-o.webp"
+              alt="Airplane in flight"
+            />
+          </a>
+          <p>Airplane in flight</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/modern-highway-30634010913-o.webp"
+            data-caption="Modern highway"
+          >
+            <img 
+              src="gallery/modern-highway-30634010913-o.webp"
+              alt="Modern highway"
+            />
+          </a>
+          <p>Modern highway</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/voyager-rush-hour.webp"
+            data-caption="Rush hour traffic (Thailand)"
+          >
+            <img 
+              src="gallery/voyager-rush-hour.webp"
+              alt="Rush hour traffic (Thailand)"
+            />
+          </a>
+          <p>Rush hour traffic (Thailand)</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/street-scene-31071643420-o.webp"
+            data-caption="Street scene"
+          >
+            <img 
+              src="gallery/street-scene-31071643420-o.webp"
+              alt="Street scene"
+            />
+          </a>
+          <p>Street scene</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/woman-with-microscope-31071614760-o.webp"
+            data-caption="Woman with microscope"
+          >
+            <img 
+              src="gallery/woman-with-microscope-31071614760-o.webp"
+              alt="Woman with microscope"
+            />
+          </a>
+          <p>Woman with microscope</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/x-ray-of-hand-31220229722-o.webp"
+            data-caption="X-ray of hand"
+          >
+            <img 
+              src="gallery/x-ray-of-hand-31220229722-o.webp"
+              alt="X-ray of hand"
+            />
+          </a>
+          <p>X-ray of hand</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/un-building-day-30542352584-o.webp"
+            data-caption="UN Building Day"
+          >
+            <img 
+              src="gallery/un-building-day-30542352584-o.webp"
+              alt="UN Building Day"
+            />
+          </a>
+          <p>UN Building Day</p>
+        </div>
           </div>
-          <p>
-            A selection of images included on the Golden Record for any potential 
-            extraterrestrial discoverers.
-          </p>
         </div>
 
-        <!-- Launch -->
+        <!-- 3) Launch & Spacecraft -->
         <div
           class="tab-pane fade"
           id="launch"
           role="tabpanel"
           aria-labelledby="launch-tab"
         >
-          <div class="gallery-group row my-4">
-            <div class="col-md-6">
-              <a href="file/launch1-large.jpg">
-                <img src="file/launch1.jpg" alt="Launch Day 1" />
-              </a>
-            </div>
-            <div class="col-md-6">
-              <a href="file/launch2-large.jpg">
-                <img src="file/launch2.jpg" alt="Launch Day 2" />
-              </a>
-            </div>
+          <div class="row gallery-group">
+             <div class="col-md-4">
+          <a 
+            href="gallery/pia21739.webp"
+            data-caption="Voyager 1’s Launch Vehicle"
+          >
+            <img 
+              src="gallery/pia21739.webp"
+              alt="Voyager 1’s Launch Vehicle"
+            />
+          </a>
+          <p>Voyager 1’s Launch Vehicle</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/spacecraft-profile.webp"
+            data-caption="spacecraft-profile"
+          >
+            <img 
+              src="gallery/spacecraft-profile.webp"
+              alt="spacecraft-profile"
+            />
+          </a>
+          <p>spacecraft-profile</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/pia21727.webp"
+            data-caption="Voyager 2 in Launch Vehicle"
+          >
+            <img 
+              src="gallery/pia21727.webp"
+              alt="Voyager 2 in Launch Vehicle"
+            />
+          </a>
+          <p>Voyager 2 in Launch Vehicle</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/pia21731.webp"
+            data-caption="Voyager Development Test Model"
+          >
+            <img 
+              src="gallery/pia21731.webp"
+              alt="Voyager Development Test Model"
+            />
+          </a>
+          <p>Voyager Development Test Model</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/pia21476.webp"
+            data-caption="Voyager Proof Test Model and Cleanroom"
+          >
+            <img 
+              src="gallery/pia21476.webp"
+              alt="Voyager Proof Test Model and Cleanroom"
+            />
+          </a>
+          <p>Voyager Proof Test Model and Cleanroom</p>
+        </div>
           </div>
-          <p>
-            Historical photos from the 1977 launches of Voyager 1 and Voyager 2.
-          </p>
         </div>
 
-        <!-- Images Captured -->
+        <!-- 4) Images Captured -->
         <div
           class="tab-pane fade"
           id="captured"
           role="tabpanel"
           aria-labelledby="captured-tab"
         >
-          <div class="gallery-group row my-4">
-            <div class="col-md-4">
-              <a href="file/captured1-large.jpg">
-                <img src="file/captured1.jpg" alt="Captured Image 1" />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="file/captured2-large.jpg">
-                <img src="file/captured2.jpg" alt="Captured Image 2" />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="file/captured3-large.jpg">
-                <img src="file/captured3.jpg" alt="Captured Image 3" />
-              </a>
-            </div>
-          </div>
-          <p>
-            Stunning views of the solar system and beyond taken by the Voyager 
-            spacecraft over the decades.
-          </p>
+          <div class="row gallery-group">
+            
+             <div class="col-md-4">
+          <a 
+            href="gallery/pale-blue-dot-revised.webp"
+            data-caption="Pale Blue Dot"
+          >
+            <img 
+              src="gallery/pale-blue-dot-revised.webp"
+              alt="Pale Blue Dot"
+            />
+          </a>
+          <p>Pale Blue Dot</p>
         </div>
-      </div>
-    </div>
-  </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/pia01384.webp"
+            data-caption="Jupiter’s Great Red Spot"
+          >
+            <img 
+              src="gallery/pia01384.webp"
+              alt="Jupiter’s Great Red Spot"
+            />
+          </a>
+          <p>Jupiter’s Great Red Spot</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/pia01529.webp"
+            data-caption="Jupiter’s Faint Ring System"
+          >
+            <img 
+              src="gallery/pia01529.webp"
+              alt="Jupiter’s Faint Ring System"
+            />
+          </a>
+          <p>Jupiter’s Faint Ring System</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/pia00335.webp"
+            data-caption="Beyond Saturn"
+          >
+            <img 
+              src="gallery/pia00335.webp"
+              alt="Beyond Saturn"
+            />
+          </a>
+          <p>Beyond Saturn</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/pia01531.webp"
+            data-caption="Saturn’s B and C Rings"
+          >
+            <img 
+              src="gallery/pia01531.webp"
+              alt="Saturn’s B and C Rings"
+            />
+          </a>
+          <p>Saturn’s B and C Rings</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/pia01394.webp"
+            data-caption="Voyager’s Enceladus"
+          >
+            <img 
+              src="gallery/pia01394.webp"
+              alt="Voyager’s Enceladus"
+            />
+          </a>
+          <p>Voyager’s Enceladus</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/pia00032.webp"
+            data-caption="Uranus in True and False Color"
+          >
+            <img 
+              src="gallery/pia00032.webp"
+              alt="Uranus in True and False Color"
+            />
+          </a>
+          <p>Uranus in True and False Color</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/PIA18182~orig.jpg"
+            data-caption="Uranus as seen by NASA Voyager 2"
+          >
+            <img 
+              src="gallery/PIA18182~orig.jpg"
+              alt="Uranus as seen by NASA Voyager 2"
+            />
+          </a>
+          <p>Uranus as seen by NASA Voyager 2</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/pia01979.webp"
+            data-caption="Full-disc View of Titania"
+          >
+            <img 
+              src="gallery/pia01979.webp"
+              alt="Full-disc View of Titania"
+            />
+          </a>
+          <p>Full-disc View of Titania</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/PIA01492-1.jpg"
+            data-caption="Neptune Full Disk View"
+          >
+            <img 
+              src="gallery/PIA01492-1.jpg"
+              alt="Neptune Full Disk View"
+            />
+          </a>
+          <p>Neptune Full Disk View</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/PIA01996~orig.jpg"
+            data-caption="Neptune – Closest Approach"
+          >
+            <img 
+              src="gallery/PIA01996~orig.jpg"
+              alt="Neptune – Closest Approach"
+            />
+          </a>
+          <p>Neptune – Closest Approach</p>
+        </div>
+              <div class="col-md-4">
+          <a 
+            href="gallery/PIA01493~orig.jpg"
+            data-caption="Neptune Rings"
+          >
+            <img 
+              src="gallery/PIA01493~orig.jpg"
+              alt="Neptune Rings"
+            />
+          </a>
+          <p>Neptune Rings</p>
+        </div>          </div>
+        </div>
+
+      </div> <!-- End of tab-content -->
+    </div> <!-- End of container -->
+  </div> <!-- End of content-section -->
 
   <!-- Footer -->
   <footer class="footer">
@@ -317,9 +1134,8 @@
       <p>&copy; 2024 Genex Space. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- Bootstrap JS for Tabs -->
-  <script src="file/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS (enables tab switching) -->
+  <script src="file/bootstrap.min.js"></script>
 
   <!-- BaguetteBox JS (from a CDN or local) -->
   <script
@@ -328,9 +1144,7 @@
   <script>
     // Initialize baguetteBox for all .gallery-group containers
     document.addEventListener('DOMContentLoaded', function() {
-      // For each tab's images, we can re-run or simply pass the main container
       baguetteBox.run('.gallery-group', {
-        // optional settings
         animation: 'fadeIn',
         noScrollbars: true,
       });
