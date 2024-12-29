@@ -1,4 +1,4 @@
-const CACHE_NAME = "voyager-app-cache-v2";
+const CACHE_NAME = "voyager-app-cache-v3";
 const URLS_TO_CACHE = [
     "/file/baguetteBox.min.css",
     "/file/baguetteBox.min.js",
@@ -18,6 +18,7 @@ const URLS_TO_CACHE = [
     "/file/voyager-record-diagram.jpeg",
     "/file/voyager-record-location.jpeg",
     "/file/Voyager_spacecraft_model.png",
+    "file/logo-long-01-2048x562.png",
     "/gallery/airplane-in-flight-30634172743-o.webp",
     "/gallery/astronaut-in-space-30620956564-o.webp",
     "/gallery/calibration-circle-31325346536-o.webp",
@@ -132,7 +133,7 @@ self.addEventListener("install", (event) => {
             return cache.addAll(URLS_TO_CACHE);
         })
     );
-    console.log("Service Worker installed: voyager-app-cache-v2");
+    console.log("Service Worker installed: voyager-app-cache-v3");
 });
 
 // Fetch event
